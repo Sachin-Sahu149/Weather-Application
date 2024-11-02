@@ -15,7 +15,7 @@ import { weatherCode } from "../../Content/WeatherCode";
 export function CurrentWeather() {
 
     return (
-        <div className='flex flex-col  justify-between w-[700px] h-[400px] p-2 bg-green-300 font-poppins text-slate-600'>
+        <div className='flex flex-col  justify-between w-[700px] h-[400px] p-2 mb-6 bg-green-300 font-poppins text-slate-600'>
             <div className='h-[40%] bg-pink-200 flex'>
                 <div className='bg-blue-200 w-1/2 flex flex-col justify-between p-4'>
                     <div className='flex justify-between'>
