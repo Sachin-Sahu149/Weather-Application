@@ -1,11 +1,11 @@
-import { Pressure } from "../../assets";
+import { PressureIcon } from "../../assets";
 
 export default function Pressure() {
 
     return (
         <div>
             <div className='flex justify-center items-center'>
-                <img src={Pressure} alt="pressure" height="30" width="30" className='mr-2' />
+                <img src={PressureIcon} alt="pressure" height="30" width="30" className='mr-2' />
                 <span> 342 paskal</span>
             </div>
             <span>Pressure</span>

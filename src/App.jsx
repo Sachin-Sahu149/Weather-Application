@@ -1,6 +1,7 @@
 import './App.css'
-import { dewPoint, Humidity, latitude, longitude, precipitation, Pressure, UVIndex, WeatherIcon, windSpeed } from './assets/index.js';
+// import { dewPoint, Humidity, latitude, longitude, precipitation, Pressure, UVIndex, WeatherIcon, windSpeed } from './assets/index.js';
 import Navbar from './Component/Navbar/Navbar.jsx';
+import { CurrentWeather } from './Component/Realtime/CurrentWeather.jsx';
 import { weatherCode } from './Content/WeatherCode.js';
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
           {/* <span className='hover:text-[0.93rem] cursor-pointer'>MinuteCast</span>
           <span className='hover:text-[0.93rem] cursor-pointer'>Monthly</span> */}
         </div>
-        <div className='flex flex-col  justify-between w-[700px] h-[400px] p-2 bg-green-300 font-poppins text-slate-600'>
+        {/* <div className='flex flex-col  justify-between w-[700px] h-[400px] p-2 bg-green-300 font-poppins text-slate-600'>
           <div className='h-[40%] bg-pink-200 flex'>
             <div className='bg-blue-200 w-1/2 flex flex-col justify-between p-4'>
               <div className='flex justify-between'>
@@ -133,7 +134,8 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <CurrentWeather/>
         <div>
           To show forecast data
           <div>
