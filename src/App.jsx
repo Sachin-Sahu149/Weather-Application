@@ -1,24 +1,26 @@
 import './App.css'
 import DailyMainPage from './Component/Daily/DailyMainPage.jsx';
+import Footer from './Component/Footer.jsx';
 import Hourly from './Component/Hourly/Hourly.jsx';
-// import { dewPoint, Humidity, latitude, longitude, precipitation, Pressure, UVIndex, WeatherIcon, windSpeed } from './assets/index.js';
 import Navbar from './Component/Navbar/Navbar.jsx';
 import { CurrentWeather } from './Component/Realtime/CurrentWeather.jsx';
 import RedirectTag from './Component/RedirectTag.jsx';
-import { weatherCode } from './Content/WeatherCode.js';
+import Description from './Component/WeatherSummary/Description.jsx';
 
 function App() {
 
   return (
-    <div className=' w-full overflow-hidden bg-gray-600 px-12'>
+    <div className=' w-full overflow-hidden bg-gray-600'>
       <Navbar />
-      <div className='flex flex-col justify-center items-center'>
+      <div className='flex flex-col justify-center items-center px-1 xs:px-12'>
         <p>Render search option</p>
         <RedirectTag />
         <CurrentWeather />
+        {/* <Description/> */}
         <Hourly />
         <DailyMainPage/>
       </div>
+      <Footer/>
     </div>
   );
 }

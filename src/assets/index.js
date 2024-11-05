@@ -9,7 +9,10 @@ import UVIndexIcon from './UVIndex.png'
 import weatherIconIcon from './WeatherIcon.svg'
 import humidityIcon from './humidity.png'
 import PressureIcon from './PressureIcon.png'
-
+import sunrise from './sunrise.svg'
+import sunset from './sunset.svg'
+import minTemp from './minTemp.svg';
+import maxTemp from './maxTemp.svg';
 export {
     AppIcon,
     WorldIcon,
@@ -21,5 +24,9 @@ export {
     UVIndexIcon,
     weatherIconIcon,
     humidityIcon,
-    PressureIcon
+    PressureIcon,
+    sunrise,
+    sunset,
+    minTemp,
+    maxTemp
 }

@@ -1,13 +1,13 @@
-import {humidityIcon } from "../../assets";
+import { humidityIcon } from "../../assets";
 
 export default function Humidity() {
     return (
-        <div>
-            <div className='flex justify-center items-center'>
-                <img src={humidityIcon} alt="humdity" height="30" width="30" className='mr-2' />
-                <span>35%</span>
+        <div className=' flex-1 flex justify-center items-center'>
+            <img src={humidityIcon} alt="humdity" height="30" width="30" className='mr-2' />
+            <div>
+                <span className="numberFont">35%</span><br />
+                <span>Humidity</span>
             </div>
-            <span>Humidity</span>
         </div>
     );
 }

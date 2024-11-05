@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Option({ setUnit ,setShow}) {
+function Option({ setUnit, setShow }) {
     let celcius = (e) => {
         setUnit("metric");
         setShow(false);
@@ -38,14 +38,16 @@ export default function Metric() {
 
     return (
         <>
-
-            <div className="h-full w-10 bg-green-500 relative flex justify-center items-center">
-                <span onClick={() => setShow(true)} className="text-center">
-                    {unit === "metric"?<span>&deg;C</span>: <span>&deg;F</span>}
+            <div className="  h-full w-10 bg-green-500 relative flex justify-around items-center">
+                <span onClick={() => setShow(true)} className="text-center mb-0">
+                    {unit === "metric" ? <span>&deg;C</span> : <span>&deg;F</span>}
                 </span>
-
-                    {show && <Option setUnit={setUnit} setShow={setShow}/>}
+                <span onClick={() => setShow(true)}><i class="fa-solid fa-caret-down" style={{color: "#494b50",}}></i></span>
+                
+                {show && <Option setUnit={setUnit} setShow={setShow} />}
             </div>
         </>
     );
 }
+
+//<FontAwesomeIcon icon="fa-solid fa-caret-down" style={{color: "#494b50",}} />

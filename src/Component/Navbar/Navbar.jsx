@@ -7,9 +7,9 @@ import SearchButton from "./SearchButton";
 export default function Navbar(){
 
     return (
-        <div className='w-full bg-orange-300 h-[75px] flex justify-center items-center justify-between '>
+        <div className='w-full bg-orange-300 h-[75px]  vs:px-2 flex justify-center items-center justify-between '>
         <AppName/>
-        <SearchBar/>
+        {/* <SearchBar/> */}
         <MenuTag/>
       </div>
     );
