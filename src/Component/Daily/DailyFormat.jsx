@@ -14,7 +14,7 @@ export default function DailyFormat({marginRight}) {
                 <img src={weatherCode[1100].icon} alt="" />
             </div>
             <div>
-                <span className=' text-[18px] xs:text-3xl'>33&deg;C</span>
+                <span className=' text-[18px] xs:text-2xl'>33&deg;C/32&deg;C</span>
             </div>
         </div>
     );
