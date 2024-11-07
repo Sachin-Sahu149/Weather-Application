@@ -5,5 +5,3 @@ export default function SearchButton({buttonStyle}){
         <button className={`${buttonStyle} bg-sky-500 hover:bg-sky-700 text-white text-center font-semibold  `}>Search</button>
     );
 }
-
-// buttonAppearance = "px-4 py-2 rounded-full"

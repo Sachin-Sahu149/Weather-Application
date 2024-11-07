@@ -14,8 +14,9 @@ import { weatherCode } from "../../Content/WeatherCode";
 import './CurrentWeather.css'
 export function CurrentWeather() {
 
+
     return (
-        <div className='flex-1 flex flex-col  justify-between w-full sm:w-[700px] xs:h-[400px] rounded-lg p-2 mb-6 bg-green-300 font-poppins text-[14px] ss:text-[17px] leading-6 xs:font-normal text-slate-600'>
+        <div className='flex-1 flex flex-col  justify-between w-full sm:w-[700px] xs:h-[400px] rounded-lg p-2 mb-6 bg-green-300 font-poppins text-[9px] ts:text-[14px] ss:text-[17px] leading-6 xs:font-normal text-slate-600'>
             <div className='h-[40%]  bg-pink-200 w-full ss:flex'> 
                 <div className='bg-blue-200 ss:w-1/2 flex flex-col justify-between p-2 sm:p-4'>
                     <div className='flex text-center justify-between'>

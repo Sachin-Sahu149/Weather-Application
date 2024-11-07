@@ -29,7 +29,6 @@ export default function DailyMainPage() {
             <div className="bg-slate-300 self-start text-[18px] xs:text-2xl font-semibold text-slate-500">
                 <span>Next 5 days forecast</span>
             </div>
-            {/* Pass itemsCount as a prop to DailyContainer */}
             <DailyContainer itemsCount={itemsCount} />
         </div>
     );

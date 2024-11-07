@@ -50,4 +50,3 @@ export default function Metric() {
     );
 }
 
-//<FontAwesomeIcon icon="fa-solid fa-caret-down" style={{color: "#494b50",}} />
