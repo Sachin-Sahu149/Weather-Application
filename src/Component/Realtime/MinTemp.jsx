@@ -1,14 +1,15 @@
+import { minTemp } from "../../assets";
 
 
 export default function MinTemp() {
 
     return (
-        <div>
-            <div className='flex justify-center items-center'>
-                <img src="https://cf-img-a-in.tosshub.com/sites/weather/resources/image/temp_min.svg" alt="min" height="20" width="20" className='mr-2' />
-                <span>31&deg;C</span>
+        <div className='flex-1 flex ss:justify-center items-center border-solid border-r-2 border-b'>
+            <img src={minTemp} alt="min" className='mr-2 w-[25px] ts:w-[30px]' />
+            <div>
+                <span className="numberFont">31&deg;C</span> <br />
+                <span>Min-Temp</span>
             </div>
-            <span>Min-Temp</span>
         </div>
     );
 }

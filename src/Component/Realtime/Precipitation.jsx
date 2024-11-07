@@ -1,14 +1,14 @@
-import { precipitation } from "../../assets";
+import { precipitationIcon } from "../../assets";
 
 export default function Precipitation() {
 
     return (
-        <div>
-            <div className='flex justify-center items-center'>
-                <img src={precipitation} alt="Precipitaion" height="30" width="30" className='mr-2' />
-                <span>79%</span>
+        <div className=' flex-1 flex ss:justify-center items-center border-solid border-r-2 border-b'>
+            <img src={precipitationIcon} alt="Precipitaion" className='mr-2 w-[25px] ts:w-[30px]' />
+            <div >
+                <span className="numberFont">79%</span> <br />
+                <span>Precipitation</span>
             </div>
-            <span>Precipitation</span>
         </div>
     );
 }

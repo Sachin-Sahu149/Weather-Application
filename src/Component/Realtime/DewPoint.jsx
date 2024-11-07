@@ -1,14 +1,14 @@
-import { dewPoint } from "../../assets";
+import { dewPointIcon } from "../../assets";
 
 export default function DewPoint() {
 
     return (
-        <div>
-            <div className='flex justify-center items-center'>
-                <img src={dewPoint} alt="DewPoint" height="30" width="30" className='mr-2' />
-                <span>342.32</span>
-            </div>
+        <div className=' flex-1 flex justify-end  ss:justify-center items-center border-b'>
+                <img src={dewPointIcon} alt="DewPoint"  className='mr-2 w-[25px] ts:w-[30px]' />
+            <div >
+                <span className="numberFont">342.32</span> <br />
             <span>Dew point</span>
+            </div>
         </div>
     );
 }

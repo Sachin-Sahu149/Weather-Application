@@ -1,0 +1,12 @@
+.numberFont{
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 310px) {
+    .numberFont {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
