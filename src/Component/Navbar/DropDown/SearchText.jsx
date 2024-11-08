@@ -9,8 +9,8 @@ export function SearchText({setSearchList,countries}) {
             id="country"
             onChange={(e)=>{setSearchList([...CountryList(e.target.value,countries)])}}
             placeholder="Seach country"
-            className=" text-center placeholder:italic rounded-full focus:outline-none focus:ring-1 mb-6
-            focus:ring-sky-500 hover:ring-1 hover:ring-yellow-300 font-poppins bg-gray-200 text-center text-slate-600"
+            className=" text-center placeholder:italic rounded-full focus:outline-none focus:ring-1 mb-6 placeholder:text-slate-100
+            focus:ring-[#C6C6C6] hover:ring-1 hover:ring-[#A0A0A0] font-poppins bg-[#848484] text-center text-slate-100"
         />
     );
 }

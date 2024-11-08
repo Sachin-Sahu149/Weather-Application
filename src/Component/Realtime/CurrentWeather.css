@@ -4,9 +4,13 @@
     font-weight: 600;
 }
 
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 360px) {
     .numberFont {
       font-size: 12px;
       line-height: 12px;
     }
+  }
+
+  .currentContainer{
+    background-image: url();
   }

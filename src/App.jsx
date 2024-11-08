@@ -1,30 +1,19 @@
-import DailyMainPage from './Component/Daily/DailyMainPage.jsx';
-import ExpandedView from './Component/Daily/ExpandedView.jsx';
+import { useState, useEffect } from 'react';
 import Footer from './Component/Footer.jsx';
-import ExpandedHourly from './Component/Hourly/ExpandedHourly.jsx';
-import Hourly from './Component/Hourly/Hourly.jsx';
 import Navbar from './Component/Navbar/Navbar.jsx';
-import SearchBar from './Component/Navbar/SearchBar.jsx';
-import { CurrentWeather } from './Component/Realtime/CurrentWeather.jsx';
-import RedirectTag from './Component/RedirectTag.jsx';
+import MainPage from './Component/mainPage.jsx';
 
 function App() {
 
-  return (
-    <div className=' w-full overflow-hidden bg-gray-600'>
-      <Navbar />
-      <div className='flex flex-col justify-center items-center px-3 ss:px-6 sm:px-12'>
-        <RedirectTag />
-        <div className='bg-green-300 mb-1 w-full rounded p-1 flex justify-end ss:hidden'>
-          <SearchBar display=" flex max-w-[400px] h-[30px]" inputAppearance="rounded-md" buttonAppearance="px-3  rounded-md" />
+  const [country, setCountry] = useState("India");
+  let [searchCity, setSearchCity] = useState("greater noida");
+  let [unit, setUnit] = useState(true);
 
-        </div>
-        <CurrentWeather />
-        <Hourly />
-        <ExpandedHourly />
-        <DailyMainPage />
-        <ExpandedView />
-      </div>
+
+  return (
+    <div className=' w-full overflow-hidden  bg-gradient-to-b from-[#3F3F3F] scroll-smooth'>
+      <Navbar setCountry={setCountry} setSearchCity={setSearchCity} setUnit={setUnit} unit={unit} />
+      <MainPage country={country} searchCity={searchCity} setSearchCity={setSearchCity} unit={unit}/>
       <Footer />
     </div>
   );

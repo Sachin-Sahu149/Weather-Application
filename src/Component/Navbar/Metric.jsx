@@ -1,35 +1,45 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 
 function Option({ setUnit, setShow }) {
     let celcius = (e) => {
-        setUnit("metric");
+        setUnit(true);
         setShow(false);
     }
     let fahrenheit = (e) => {
-        setUnit("imperial");
+        setUnit(false);
         setShow(false);
     }
+
+    const dropdownRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setShow(false);
+            }
+        };
+
+        // Bind the event listener
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            // Unbind the event listener on cleanup
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
     return (
-        <div className="h-[60px] w-[50px] bg-gray-200 text-center py-2 rounded-md absolute -bottom-[100%]">
+        <div ref={dropdownRef} className=" z-20 h-[60px] w-[50px] bg-[#606060] text-center py-2 rounded-md font-poppins text-slate-200  absolute -bottom-[100%] ">
             <ul>
-                <li onClick={celcius} className="hover:bg-gray-300 font-poppins text-gray-600 cursor-pointer"> &deg;C</li>
-                <li onClick={fahrenheit} className="hover:bg-gray-300 font-poppins text-gray-600 cursor-pointer">&deg;F</li>
+                <li onClick={celcius} className="hover:bg-[#737373]   cursor-pointer"> &deg;C</li>
+                <li onClick={fahrenheit} className="hover:bg-[#737373] cursor-pointer">&deg;F</li>
             </ul>
         </div>
     );
 }
 
-export default function Metric() {
-    let [unit, setUnit] = useState("metric");
-    let [show, setShow] = useState(false);
+export default function Metric({ setUnit, unit }) {
 
-    let handleUnit = () => {
-        if (unit === "metric") {
-            setUnit("imperial");
-        } else {
-            setUnit("metric");
-        }
-    }
+    let [show, setShow] = useState(false);
 
     useEffect(() => {
         console.log(unit);
@@ -38,12 +48,12 @@ export default function Metric() {
 
     return (
         <>
-            <div className="  h-full w-10 bg-green-500 relative flex justify-around items-center">
-                <span onClick={() => setShow(true)} className="text-center mb-0">
-                    {unit === "metric" ? <span>&deg;C</span> : <span>&deg;F</span>}
+            <div className="  h-full w-10 relative flex justify-around items-center">
+                <span onClick={() => setShow(true)} className="text-center mb-0 font-semibold">
+                    {unit ? <span>&deg;C</span> : <span>&deg;F</span>}
                 </span>
-                <span onClick={() => setShow(true)}><i class="fa-solid fa-caret-down" style={{color: "#494b50",}}></i></span>
-                
+                <span onClick={() => setShow(true)}><i class="fa-solid fa-caret-down" style={{ color: "#ced4da", }}></i></span>
+
                 {show && <Option setUnit={setUnit} setShow={setShow} />}
             </div>
         </>
