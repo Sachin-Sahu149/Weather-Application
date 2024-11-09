@@ -39,7 +39,7 @@ export default function DropDown({setCountryISOCode,setShow,setCountry}) {
 
 
     return (
-        <div ref={dropdownRef} className="z-10 h-[60vh] max-w-[200px] bg-[#606060] flex-1 flex flex-col justify-start items-center m-4 p-2 rounded-lg absolute top-full" >
+        <div ref={dropdownRef} className="z-10 h-[60vh] w-[200px] bg-[#606060] flex-1 flex flex-col justify-start items-center m-4 p-2 rounded-lg absolute top-full" >
 
             <SearchText setSearchList={setSearchList} countries={Data}/>
             <div className="h-full w-full overflow-y-scroll scroll-smooth">
