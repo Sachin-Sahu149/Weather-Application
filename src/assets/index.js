@@ -13,6 +13,11 @@ import sunrise from './sunrise.svg'
 import sunset from './sunset.svg'
 import minTemp from './minTemp.svg';
 import maxTemp from './maxTemp.svg';
+
+
+
+
+
 export {
     AppIcon,
     WorldIcon,
@@ -28,5 +33,5 @@ export {
     sunrise,
     sunset,
     minTemp,
-    maxTemp
+    maxTemp,
 }

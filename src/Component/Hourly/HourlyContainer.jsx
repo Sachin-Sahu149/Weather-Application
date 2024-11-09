@@ -14,7 +14,8 @@ import Card from './Card';
 import './HourlyContainer.css'
 
 
-export default function HourlyContainer() {
+export default function HourlyContainer({hourlyWeatherData,unit}) {
+  let index = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
   return (
     <>
       <Swiper
@@ -28,15 +29,11 @@ export default function HourlyContainer() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
+        {
+          index.map((ind)=>(
+            <SwiperSlide><Card index={ind} hourlyWeatherData={hourlyWeatherData} unit={unit} /></SwiperSlide>
+          ))
+        }
       </Swiper>
     </>
   );
