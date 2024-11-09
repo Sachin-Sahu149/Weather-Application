@@ -46,6 +46,8 @@ export default function MainPage({ country, unit, searchCity, setSearchCity }) {
             }
         };
         fetchData();
+        setIsError(false)
+        
     }, [searchCity])
 
 
@@ -775,7 +777,6 @@ export default function MainPage({ country, unit, searchCity, setSearchCity }) {
             <RedirectTag setSearchCity={setSearchCity} />
             <div className='mb-1 w-full rounded p-1 flex justify-end ss:hidden'>
                 <SearchBar setSearchCity={setSearchCity} display=" flex max-w-[400px] h-[30px]" inputAppearance="rounded-md" buttonAppearance="px-3  rounded-md" />
-                {isError && <p className='text-[9px] vs:text-[14px] '>Check spelling mistakes or enter correct area name</p>}
             </div>
             <CurrentWeather weatherInfo={weatherData} unit={unit} coordinate={coordinate} />
             <div className='  bg-[#646567]  flex-1 flex  items-center w-full sm:w-[700px] rounded-lg p-2 mb-6  font-poppins text-[9px] vs:text-[14px] ss:text-[17px] leading-[] vs:leading-6 xs:font-normal text-slate-100'>
